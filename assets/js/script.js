@@ -37,14 +37,6 @@ function get_cities_saved() {
   cities_chosen_div.addEventListener('click', get_city_chosen);
 }
 
-// Adding the autocomplete on the input
-$(function () {
-  var availableTags = ['York', 'Tokyo', 'Shanghai', 'Deli', 'Prague', 'Seoul'];
-  $("#input_cities").autocomplete({
-    source: availableTags,
-  });
-});
-
 // Checking if the input value is not a number or null, if it is, then pop up one alert saying that suppose to be one valid city on EUA
 function get_city() {
   if (input_cities.value == '') {
@@ -86,13 +78,13 @@ function get_city() {
         return response.json();
       })
       .then(function (data) {
-        return get_wheater(data);
+        return get_weather(data);
       })
   }
 }
 
 // Function that will be actived after get the data from the city that the user wrote on the input
-function get_wheater(data) {
+function get_weather(data) {
   // Adding Today's Day
   city_name.innerHTML = data.city.name + ' ' + moment().format("(MM-DD-YYYY)");
 
@@ -103,22 +95,22 @@ function get_wheater(data) {
   uv_index.innerHTML = ' ' + 'pending';
   console.log(data.list)
 
-  if (data.list[0].weather[0].main == "sunny") {
+  if (data.list[0].weather[0].main == "Clear") {
     img_weather_today.classList.remove('hide');
     img_weather_today.setAttribute('src', '../assets/images/sunny.png');
     img_weather_today.setAttribute('alt', 'sunny');
 
-  } else if (data.list[1].weather[0].main == "cloudy") {
+  } else if (data.list[1].weather[0].main == "Clouds") {
     img_weather_today.classList.remove('hide');
     img_weather_today.setAttribute('src', '../assets/images/cloudy.png');
     img_weather_today.setAttribute('alt', 'cloudy');
 
-  } else if (data.list[2].weather[0].main == "rainy") {
+  } else if (data.list[2].weather[0].main == "Rain") {
     img_weather_today.classList.remove('hide');
     img_weather_today.setAttribute('src', '../assets/images/rainy.png');
     img_weather_today.setAttribute('alt', 'rainy');
 
-  } else if (data.list[3].weather[0].main == "snowy") {
+  } else if (data.list[3].weather[0].main == "Snow") {
     img_weather_today.classList.remove('hide');
     img_weather_today.setAttribute('src', '../assets/images/snowy.png');
     img_weather_today.setAttribute('alt', 'snowy');
@@ -130,11 +122,11 @@ function get_wheater(data) {
   }
 
   // After adding the Image, then pass the data from the api to another function to add the next 5 days weather
-  get_wheater_5(data);
+  get_weather_5(data);
 }
 
-function get_wheater_5(data) {
-  console.log("get_wheater_5");
+function get_weather_5(data) {
+  console.log("get_weather_5");
   // Doing a loop to add the temp, wind, humidity and one image to the next 5 days weather
   for (i = 1; i <= 5; i++) {
     var time_5 = document.querySelector('#time' + [i]);
@@ -151,22 +143,22 @@ function get_wheater_5(data) {
     humidity_5.textContent = ` ${data.list[i * 7].main.humidity} %`;
 
     // Adding the image that best represents the general weather of the day
-    if (data.list[i * 7].weather[0].main == "sunny") {
+    if (data.list[i * 7].weather[0].main == "Clear") {
       img_5.classList.remove('hide');
       img_5.setAttribute('src', '../assets/images/sunny.png');
       img_5.setAttribute('alt', 'sunny');
 
-    } else if (data.list[i * 7].weather[0].main == "cloudy") {
+    } else if (data.list[i * 7].weather[0].main == "Clouds") {
       img_5.classList.remove('hide');
       img_5.setAttribute('src', '../assets/images/cloudy.png');
       img_5.setAttribute('alt', 'cloudy');
 
-    } else if (data.list[i * 7].weather[0].main == "rainy") {
+    } else if (data.list[i * 7].weather[0].main == "Rain") {
       img_5.classList.remove('hide');
       img_5.setAttribute('src', '../assets/images/rainy.png');
       img_5.setAttribute('alt', 'rainy');
 
-    } else if (data.list[i * 7].weather[0].main == "snowy") {
+    } else if (data.list[i * 7].weather[0].main == "Snow") {
       img_5.classList.remove('hide');
       img_5.setAttribute('src', '../assets/images/snowy.png');
       img_5.setAttribute('alt', 'snowy');
@@ -205,11 +197,11 @@ function get_city_chosen(e) {
       return response.json();
     })
     .then(function (data) {
-      return get_wheater(data);
+      return get_weather(data);
     })
 }
 
-// Calling the get_wheater function after click on the button
+// Calling the get_weather function after click on the button
 $('#search').on('click', function (e) {
   get_city()
 });
@@ -219,4 +211,4 @@ function clearcities() {
   location.reload();
 }
 
-document.getElementById("clear").onclick = clearcities;
+document.getElementById("cleanup").onclick = clearcities;
