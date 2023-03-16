@@ -48,10 +48,13 @@ The humidity
 <br>
 When a user clicks on a city in the search history they are again presented with current and future conditions for that city. 
 <br>
+
 When a user clicks on the clear button all the search history are erased from the user interface and the local storage.
 <br>
+
 Link to the Weather-Report - https://sabrinahuajy.github.io/SabrinaHuajy-5day-Weather-Report/
 <br>
+
 The following images show the web application's appearance and functionality:
 
 <img src="./assets/Images/screenshot/screenshot1.PNG" alt="screenshot of the user interface1">

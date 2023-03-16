@@ -96,17 +96,17 @@ function get_weather(data) {
 
   if (data.list[0].weather[0].main == "Clear") {
     img_weather_today.classList.remove('hide');
-    img_weather_today.setAttribute('src', '../assets/images/sunny.png');
+    img_weather_today.setAttribute('src', './assets/Images/sunny.png');
     img_weather_today.setAttribute('alt', 'sunny');
 
   } else if (data.list[1].weather[0].main == "Clouds") {
     img_weather_today.classList.remove('hide');
-    img_weather_today.setAttribute('src', '../assets/images/cloudy.png');
+    img_weather_today.setAttribute('src', './assets/Images/cloudy.png');
     img_weather_today.setAttribute('alt', 'cloudy');
 
   } else if (data.list[2].weather[0].main == "Rain") {
     img_weather_today.classList.remove('hide');
-    img_weather_today.setAttribute('src', '../assets/images/rainy.png');
+    img_weather_today.setAttribute('src', './assets/Images/rainy.png');
     img_weather_today.setAttribute('alt', 'rainy');
 
   } else if (data.list[3].weather[0].main == "Snow") {
@@ -116,7 +116,7 @@ function get_weather(data) {
 
   } else {
     img_weather_today.classList.remove('hide');
-    img_weather_today.setAttribute('src', '../assets/images/dangerous.png');
+    img_weather_today.setAttribute('src', './assets/Images/dangerous.png');
     img_weather_today.setAttribute('alt', 'dangerous');
   }
 
@@ -144,27 +144,27 @@ function get_weather_5(data) {
 
     if (data.list[i * 7].weather[0].main == "Clear") {
       img_5.classList.remove('hide');
-      img_5.setAttribute('src', '../assets/images/sunny.png');
+      img_5.setAttribute('src', './assets/Images/sunny.png');
       img_5.setAttribute('alt', 'sunny');
 
     } else if (data.list[i * 7].weather[0].main == "Clouds") {
       img_5.classList.remove('hide');
-      img_5.setAttribute('src', '../assets/images/cloudy.png');
+      img_5.setAttribute('src', './assets/Images/cloudy.png');
       img_5.setAttribute('alt', 'cloudy');
 
     } else if (data.list[i * 7].weather[0].main == "Rain") {
       img_5.classList.remove('hide');
-      img_5.setAttribute('src', '../assets/images/rainy.png');
+      img_5.setAttribute('src', './assets/Images/rainy.png');
       img_5.setAttribute('alt', 'rainy');
 
     } else if (data.list[i * 7].weather[0].main == "Snow") {
       img_5.classList.remove('hide');
-      img_5.setAttribute('src', '../assets/images/snowy.png');
+      img_5.setAttribute('src', './assets/Images/snowy.png');
       img_5.setAttribute('alt', 'snowy');
 
     } else {
       img_5.classList.remove('hide');
-      img_5.setAttribute('src', '../assets/images/dangerous.png');
+      img_5.setAttribute('src', './assets/Images/dangerous.png');
       img_5.setAttribute('alt', 'dangerous');
     }
   }
