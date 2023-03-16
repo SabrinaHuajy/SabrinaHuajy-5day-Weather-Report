@@ -202,9 +202,9 @@ $('#button_city').on('click', function (e) {
   get_city()
 });
 
-function clearcities() {
-  localStorage.removeItem("button_city");
-  location.reload();
-}
+// function clearcities() {
+//   localStorage.removeItem("button_city");
+//   location.reload();
+// }
 
-document.getElementById('button_city').onclick = clearcities;
+// document.getElementById('button_city').onclick = clearcities;
