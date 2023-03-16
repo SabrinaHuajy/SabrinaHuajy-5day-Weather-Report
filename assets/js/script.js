@@ -197,7 +197,8 @@ function get_city_chosen(e) {
     })
 }
 
-$('#search').on('click', function (e) {
+$('#button_city').on('click', function (e) {
+  console.log("hi")
   get_city()
 });
 
