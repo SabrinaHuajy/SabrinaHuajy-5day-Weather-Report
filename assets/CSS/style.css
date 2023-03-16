@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Adding some border and text color on the header tag */
+header {
+    background: linear-gradient(to right, #6eb4dd, #030b61);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Editing the input of the page with some width, height, margin top and padding left */
+input {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+/* Making the button occupy all column space */
+button {
+    width: 100%;
+    margin-top: 15px;
+    border: #030b61;
+    background-color: #6eb4dd;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Taking out the li style and adding some margin on the li tag */
+li {
+    list-style: none;
+    margin-top: 7px;
+}
+
+/* Editing the style of the box that contains the next 5 days weather */
+.box_next_days {
+    background-color: rgb(39, 39, 66);
+    color: white;
+    width: 100%;
+    margin: 0 6px 80px 6px;
+    height: 100%;
+}
+
+/* Class that will hide the buttons */
+.hide {
+    display: none;
+}
+
+/* Customizing the button that contains the cities name */
+.button_city {
+    background-color: lightgray;
+    color: black;
+    width: 100%;
+    margin-top: 15px;
+    border: #030b61;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+}
+
+/* Editing the weather image */
+.icon {
+    width: 140px;
+    height: 140px;
+}
