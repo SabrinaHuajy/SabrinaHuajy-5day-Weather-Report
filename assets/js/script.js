@@ -202,9 +202,8 @@ $('#button_city').on('click', function (e) {
   get_city()
 });
 
-// function clearcities() {
-//   localStorage.removeItem("button_city");
-//   location.reload();
-// }
-
-// document.getElementById('button_city').onclick = clearcities;
+function clearcities() {
+  localStorage.clear();
+  location.reload();
+}
+document.getElementById('clear-button').onclick = clearcities;
