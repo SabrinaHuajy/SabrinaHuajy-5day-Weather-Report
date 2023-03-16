@@ -50,9 +50,9 @@ When a user clicks on a city in the search history they are again presented with
 <br>
 The following images show the web application's appearance and functionality:
 
-<img src="assets\lmages\screenshot\screenshot1.PNG" alt="screenshot of the userinterface1">
-<img src="assets\lmages\screenshot\screenshot2.PNG" alt="screenshot of the userinterface2">
-<img src="assets\lmages\screenshot\screenshot3.PNG" alt="screenshot of the userinterface3">
-<img src="assets\lmages\screenshot\screenshot4.PNG" alt="screenshot of the userinterface4">
-<img src="assets\lmages\screenshot\screenshot5.PNG" alt="screenshot of the userinterface5">
-<img src="assets\lmages\screenshot\screenshot6.PNG" alt="screenshot of the userinterface6">
+<img src="./assets/Images/screenshot/screenshot1.PNG" alt="screenshot of the user interface1">
+<img src="./assets/Images/screenshot/screenshot2.PNG" alt="screenshot of the user interface2">
+<img src="./assets/Images/screenshot/screenshot3.PNG" alt="screenshot of the user interface3">
+<img src="./assets/Images/screenshot/screenshot4.PNG" alt="screenshot of the user interface4">
+<img src="./assets/Images/screenshot/screenshot5.PNG" alt="screenshot of the user interface5">
+<img src="./assets/Images/screenshot/screenshot6.PNG" alt="screenshot of the user interface6">
