@@ -20,7 +20,6 @@ if (parse_saved_cities !== null) {
 
 function get_cities_saved() {
 
-
   for (i = 0; i < parse_saved_cities.length; i++) {
     var button_cities = document.createElement('button');
     button_cities.setAttribute('data-value', parse_saved_cities[i].texts);
