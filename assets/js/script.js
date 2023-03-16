@@ -41,9 +41,9 @@ $(function () {
 
 function get_city() {
   if (input_cities.value == '') {
-    alert('Please, insert one city on EUA');
+    alert('Please, pick one city!');
   } else if (!isNaN(input_cities.value)) {
-    alert('Insert one city on EUA');
+    alert('Please, pick one city!');
   } else {
 
 
@@ -202,9 +202,9 @@ $('#button_city').on('click', function (e) {
   get_city()
 });
 
-// function clearcities() {
-//   localStorage.removeItem("button_cities");
-//   location.reload();
-// }
+function clearcities() {
+  localStorage.removeItem("button_city");
+  location.reload();
+}
 
-// document.getElementById("cleanup").onclick = clearcities;
+document.getElementById('button_city').onclick = clearcities;
