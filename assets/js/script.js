@@ -111,7 +111,7 @@ function get_weather(data) {
 
   } else if (data.list[3].weather[0].main == "Snow") {
     img_weather_today.classList.remove('hide');
-    img_weather_today.setAttribute('src', '../assets/images/snowy.png');
+    img_weather_today.setAttribute('src', './assets/Images/snowy.png');
     img_weather_today.setAttribute('alt', 'snowy');
 
   } else {
